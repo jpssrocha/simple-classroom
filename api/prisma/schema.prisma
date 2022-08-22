@@ -17,8 +17,8 @@ model User {
   password   String
   created_at DateTime   @default(now())
   updated_at DateTime   @updatedAt
-  role       Role       @relation(fields: [roleId], references: [id])
-  roleId     String
+  role_rel   Role       @relation(fields: [role], references: [name])
+  role       String
   posts      Post[]
   activities Activity[]
 
@@ -45,8 +45,7 @@ model Activity {
 }
 
 model Role {
-  id        String @id @default(uuid())
-  role_name String @unique
+  name      String @id @unique
   users     User[]
 }
 

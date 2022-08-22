@@ -6,6 +6,7 @@
     "lib": ["esnext"],
     "esModuleInterop": true,
     "target": "ES2016",
-    "types": [ "node" ]
+    "types": [ "node" ],
+    "moduleResolution": "node"
   }
 }

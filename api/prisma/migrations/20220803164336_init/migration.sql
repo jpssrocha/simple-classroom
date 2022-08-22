@@ -35,7 +35,7 @@ CREATE TABLE "Activity" (
 -- CreateTable
 CREATE TABLE "Role" (
     "id" TEXT NOT NULL,
-    "role_name" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
 
     CONSTRAINT "Role_pkey" PRIMARY KEY ("id")
 );
@@ -64,7 +64,7 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 CREATE INDEX "User_email_idx" ON "User"("email");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Role_role_name_key" ON "Role"("role_name");
+CREATE UNIQUE INDEX "Role_name_key" ON "Role"("name");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Attachment_relative_path_filename_key" ON "Attachment"("relative_path", "filename");
